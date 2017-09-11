@@ -9,7 +9,7 @@ class Mycog:
 
     @commands.command()
     async def about(self):
-   
+   """About Magik Bot"""
 embed=discord.Embed(title="basic test", url='http://www.mydomain.com', description="This is a description", color=0x207cee)
 embed.set_author(name="UnseenMagik", url='http://www.discordlink.com', icon_url='http://imageicon.com')
 embed.set_thumbnail(url='http://www.imageurl.com')
