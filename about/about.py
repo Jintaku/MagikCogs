@@ -23,7 +23,7 @@ embed.set_thumbnail(url='http://www.imageurl.com')
 embed.add_field(name="Test Field 1", value="Result", inline=True)
 embed.add_field(name="Test Field 2", value="Inline text", inline=True)
 embed.set_footer(text="Footer notes here. ")
-await self.bot.say(embed=embed)
+
         await self.bot.say(embed=embed)
 
 def setup(bot):
