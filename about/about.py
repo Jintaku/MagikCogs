@@ -7,8 +7,8 @@ class Mycog:
     def __init__(self, bot):
         self.bot = bot
         
-        @commands.command(pass_context=True)
-    async def about(self, ctx):
+@commands.command(pass_context=True)
+    async def excom(self, ctx):
         """CTX example command"""
         author = ctx.message.author
         description = ("Short little description with a link to "
