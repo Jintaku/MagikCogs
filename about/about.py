@@ -3,7 +3,7 @@ from discord.ext import commands
 import discord
 from cogs.utils import checks
 
-class EmbedNotification:
+class AboutMagikBot:
     """Make announcements in embeds"""
 
     def __init__(self, bot):
@@ -45,4 +45,4 @@ const embed = new Discord.RichEmbed()
   message.channel.send({embed});
 
 def setup(bot):
-    bot.add_cog(Mycog(bot))
+    bot.add_cog(AboutMagikBot(bot))
