@@ -1,11 +1,18 @@
-import discord
+from random import choice, randint
 from discord.ext import commands
+import discord
+from cogs.utils import checks
 
-class Mycog:
-    """My custom cog that does stuff!"""
+class EmbedNotification:
+    """Make announcements in embeds"""
 
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command(pass_context=True, no_pm=True, aliases=['ab'])
+    @checks.admin_or_permissions(administrator=True)
+    async def about(self, ctx, text: str, color: str = '000000'):
+        """Send a embed about notification"""
 
 const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
