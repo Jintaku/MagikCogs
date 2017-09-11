@@ -15,4 +15,4 @@ class AboutMagikBot:
         await self.bot.say("Embed ?about coming soon!")
 
 def setup(bot):
-    bot.add_cog(Mycog(bot))
+    bot.add_cog(AboutMagikBot(bot))
