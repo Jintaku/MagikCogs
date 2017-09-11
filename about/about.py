@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class AboutMagikBot:
+class About:
     """This is information about Magik Bot"""
 
     def __init__(self, bot):
@@ -15,4 +15,4 @@ class AboutMagikBot:
         await self.bot.say("Embed ?about coming soon!")
 
 def setup(bot):
-    bot.add_cog(AboutMagikBot(bot))
+    bot.add_cog(About(bot))
