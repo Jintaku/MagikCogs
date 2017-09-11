@@ -3,6 +3,9 @@ from discord.ext import commands
 
 class About:
     """This is information about Magik Bot"""
+    
+        def __init__(self, bot):
+        self.bot = bot
 
 @commands.command(pass_context=True)
     async def excom(self, ctx):
