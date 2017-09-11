@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Mycog:
+class discord.Embed(**kwargs)
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
