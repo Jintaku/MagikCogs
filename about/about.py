@@ -1,12 +1,6 @@
 import discord
 from discord.ext import commands
 
-class about:
-    """Magik Bot About!"""
-
-    def __init__(self, bot):
-        self.bot = bot
-
 const embed = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
