@@ -11,7 +11,7 @@ class Mycog:
     async def about(self):
         """About Magik Bot"""
         
-        embed=discord.Embed(title="About Magik Bot", url='http://www.magikbot.co.uk', description="A discord bot made with love. Created for Discord Administration support. <br>With hundreds of commands, admin, mod, support, games, fun and more.<br> For more information see below:<p>", color=0x207cee)
+        embed=discord.Embed(title="About Magik Bot", url='http://www.magikbot.co.uk', description="A discord bot made with love. Created for Discord Administration support. With hundreds of commands, admin, mod, support, games, fun and more. For more information see below:", color=0x207cee)
         embed.set_author(name="Magik bot", url='http://www.magikbot.co.uk', icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.add_field(name="Discord Support", value="https://discord.gg/kQjTw5Z", inline=True)
