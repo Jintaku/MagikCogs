@@ -10,20 +10,13 @@ class Mycog:
     @commands.command(pass_context=True)
     async def about(self, ctx):
         """About Magik Bot"""
-        author = ctx.message.author
-        description = ("Short little description with a link to "
-                       "the [guide](https://github.com/Redjumpman/Jumper-Cogs/wiki/Discord-Coding-Guide)")
-        field_name = "More Support at:"
-        field_contents = "This will be replaced with a URL"
-        footer_text = "Magik Bot created in Discord.py by UnseenMagik since 2017."
-
-        embed = discord.Embed(colour=0x0000FF, description=description)  # Can use discord.Colour()
-        embed.title = "About Magik Bot"
-        embed.set_author(name=str(author.name), icon_url=author.avatar_url)
-        embed.add_field(name=field_name, value=field_contents)  # Can add multiple fields.
-        embed.set_footer(text=footer_text)
-
-        await self.bot.say(embed=embed)
+        
+        embed=discord.Embed(title="basic test", url='http://www.mydomain.com', description="This is a description", color=0x207cee)
+        embed.set_author(name="UnseenMagik", url='http://www.discordlink.com', icon_url='http://imageicon.com')
+        embed.set_thumbnail(url='http://www.imageurl.com')
+        embed.add_field(name="Test Field 1", value="Result", inline=True)
+        embed.add_field(name="Test Field 2", value="Inline text", inline=True)
+        embed.set_footer(text="Footer notes here. ")
         
         
 def setup(bot):
