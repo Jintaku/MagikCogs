@@ -18,6 +18,7 @@ class Mycog:
         embed.add_field(name="Test Field 2", value="Inline text", inline=True)
         embed.set_footer(text="Footer notes here. ")
         
+        await self.bot.say(embed=embed)
         
 def setup(bot):
     bot.add_cog(Mycog(bot))
