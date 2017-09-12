@@ -8,7 +8,7 @@ class Mycog:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def about(self, ctx):
+    async def about(self):
         """About Magik Bot"""
         
         embed=discord.Embed(title="basic test", url='http://www.mydomain.com', description="This is a description", color=0x207cee)
