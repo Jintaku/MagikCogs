@@ -4,7 +4,7 @@ from discord.ext import commands
 class Mycog:
     """My custom cog that does stuff!"""
 
-@commands.command(pass_context=True)
+@commands.command()
     async def excom(self, ctx):
         """CTX example command"""
         author = ctx.message.author
