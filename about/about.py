@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
 
-class Mycog:
-    """My custom cog that does stuff!"""
+class About:
+    """More information about Magik Bot"""
     
     def __init__(self, bot):
         self.bot = bot
@@ -23,4 +23,4 @@ class Mycog:
         await self.bot.say(embed=embed)
         
 def setup(bot):
-    bot.add_cog(Mycog(bot))
+    bot.add_cog(About(bot))
