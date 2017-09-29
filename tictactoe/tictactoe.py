@@ -44,7 +44,7 @@ class Games():
  
         moves = 0
         ch = ctx.message.channel
-        cells = [[1, 0], [2, 0], [4, 0], [8, 0], [16, 0], [32, 0], [64, 0], [128, 0], [256, 0]]
+        cells = [[256, 0], [128, 0], [64, 0], [32, 0], [16, 0], [8, 0], [4, 0], [2, 0], [1, 0]]
         players = {"X": ctx.message.author, "O": opponent}
         score = {"X": 0, "O": 0}
         turn = "X"
