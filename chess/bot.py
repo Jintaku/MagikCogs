@@ -2,6 +2,8 @@
 
 # pylint: disable=C0103
 
+await client.login('MzYzMjUyMDU4NDMxNjg0NjA4.DK_-oA.mvIKktdHk9LtQVDS8uz6o6gUGRQ')
+
 import sys
 import commands
 import discord
