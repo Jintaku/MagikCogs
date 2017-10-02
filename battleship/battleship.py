@@ -11,7 +11,7 @@ class Game:
 
 
     @commands.command(pass_context=True)
-    async def game(self, ctx):
+    async def battleship(self, ctx):
         """This does stuff!"""
         #----------------------------------------------------------------#
         #message = ""
@@ -296,4 +296,4 @@ class Game:
         #await self.bot.say("This is the game coming soon.")
 
 def setup(bot):
-    bot.add_cog(Game(bot))
+    bot.add_cog(battleship(bot))
