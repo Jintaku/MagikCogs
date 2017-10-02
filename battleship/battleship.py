@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from random import randint
 
-class Game:
+class battleship:
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
