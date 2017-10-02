@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from random import randint
 
-class battleship:
+class Battleship:
     """My custom cog that does stuff!"""
 
     def __init__(self, bot):
@@ -296,4 +296,4 @@ class battleship:
         #await self.bot.say("This is the game coming soon.")
 
 def setup(bot):
-    bot.add_cog(battleship(bot))
+    bot.add_cog(Battleship(bot))
