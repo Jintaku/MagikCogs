@@ -250,7 +250,7 @@ X - A X I S
                     board[guess_x][guess_y] = "X"
                     await self.bot.say("You missed my battleship! ")
 
-                    if turn == 10:
+                    if turn == 9:
                         await self.bot.say("Game over.")
                         print ("Game Over")
                         board[ship_x][ship_y] = "M"
