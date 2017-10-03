@@ -36,11 +36,11 @@ M - Location of ships (shown at the end of the game)
 
     X - A X I S
 Y
--   O O O O O   1
-A   O O O O O   2
+-   O O O O O   5
+A   O O O O O   4
 X   O O O O O   3
-I   O O O O O   4
-S   O O O O O   5
+I   O O O O O   2
+S   O O O O O   1
 
     1 2 3 4 5```"""
 
