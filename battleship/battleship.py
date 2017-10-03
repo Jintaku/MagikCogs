@@ -27,7 +27,8 @@ class Battleship:
 
 
         guide = """
-        ```X axis
+        ```Please enter your X & Y guess in one command like < 1 3 >
+X axis
 O O O O O 1 Y
 O O O O O 2 
 O O O O O 3 A
