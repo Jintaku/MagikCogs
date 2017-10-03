@@ -27,7 +27,9 @@ class Battleship:
 
 
         guide = """
-        ```Please enter your X & Y guess in one command like < 1 3 >
+        ```To play Battleship, you must guess the location of my ships. To make your guess, enter your X & Y position in one command sepperated by a space. 
+An example would be 3 2:
+
 X axis
 O O O O O 1 Y
 O O O O O 2 
