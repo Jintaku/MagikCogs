@@ -27,16 +27,16 @@ class Battleship:
 
 
         guide = """
-        ```To play Battleship, you must guess the location of my ships. To make your guess, enter your X & Y position in one command sepperated by a space. 
-An example would be 3 2:
+        ```To play Battleship, you must guess the location of my ships. To make your guess, enter your X & Y position in one command sepperated by a space. An example would be 3 2
 
 X axis
-O O O O O 1 Y
+
+O O O O O 1     Y
 O O O O O 2 
-O O O O O 3 A
-O O O O O 4 X
-O O O O O 5 I
-1 2 3 4 5   S```"""
+O O O O O 3     A
+O O O O O 4     X
+O O O O O 5     I
+1 2 3 4 5       S```"""
 
         """
             10 9 8 7 6 5 4 3 2 1
