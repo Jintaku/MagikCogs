@@ -34,15 +34,15 @@ X = Miss
 S = Hit
 M - Location of ships (shown at the end of the game)
 
-X - A X I S
-                   Y
-O O O O O   1      -
-O O O O O   2      A
-O O O O O   3      X
-O O O O O   4      I
-O O O O O   5      S
+    X - A X I S
+Y
+-   O O O O O   1
+A   O O O O O   2
+X   O O O O O   3
+I   O O O O O   4
+S   O O O O O   5
 
-1 2 3 4 5```"""
+    1 2 3 4 5```"""
 
         """
              1 2 3 4 5 6 7 8 9 10
