@@ -32,15 +32,15 @@ class Battleship:
 O = Open Target
 X = Miss
 S = Hit
-M - Location of ships
+M - Location of ships (shown at the end of the game)
 
 X axis
 
-O O O O O   1     Y
+O O O O O   1      Y
 O O O O O   2 
-O O O O O   3     A
-O O O O O   4     X
-O O O O O   5     I
+O O O O O   3      A
+O O O O O   4      X
+O O O O O   5      I
 
 1 2 3 4 5          S```"""
 
