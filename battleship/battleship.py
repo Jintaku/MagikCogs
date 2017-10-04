@@ -69,6 +69,22 @@ class Battleship:
         
         await self.bot.say(embed=embed)
 
+                guide = """ """
+ 
+       """
+              1 2 3 4 5 6 7 8 9 10
+         Y    O O O O O O O O O O  10
+              O O O O O O O O O O  9
+         A    O O O O O O O O O O  8
+         X    O O O O O O O O O O  7
+         I    O O O O O O O O O O  6
+         S    O O O O O O O O O O  5
+              O O O O O O O O O O  4
+              O O O O O O O O O O  3
+              O O O O O O O O O O  2
+              O O O O O O O O O O  1
+              X Axis
+        """
 
         for x in range(5): #Size of the board
             board.append(["O"] * 5)
