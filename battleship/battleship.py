@@ -69,9 +69,8 @@ class Battleship:
         
         await self.bot.say(embed=embed)
 
-                guide = """ """
- 
-       """
+        guide = """ """
+        """
               1 2 3 4 5 6 7 8 9 10
          Y    O O O O O O O O O O  10
               O O O O O O O O O O  9
