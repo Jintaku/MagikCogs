@@ -28,7 +28,7 @@ class Battleship:
         embed=discord.Embed(title="About Battleship", description="~ A simple game of Battle Ships built into Magik Bot.\nO - Open Target\nX - Missed Target\nS = Target Hit\nM = Location of ships (at the end of the game)", color=0x207cee)
         embed.set_author(name="Magik bot", url='http://www.magikbot.co.uk', icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/355249562719617024/365100412874784768/Battleship-ubicom-VIDEO-launch_trailer_2016_08_02-712x712_Desktop_261122.png')
-        embed.add_field(name="How to play", value="Enter your X and Y value as a comment like this `4 2`", inline=True)
+        embed.add_field(name="How to play", value="Enter your X and Y value as a comment like this `4 2`. No prefix required", inline=True)
         embed.add_field(name="How many turns", value="You have 9 attempts to hit my 4 ships", inline=True)
         embed.add_field(name="Auther", value="UnseenMagik & Potato", inline=True)
         embed.add_field(name="Battleship Board Layout", value=" Please see grid below", inline=True)
@@ -39,15 +39,15 @@ class Battleship:
         guide = """ 
         ```
   ┌───┬───┬───┬───┬───┬───┐
-Y │ 5 │ o │ o │ o │ o │ o │
+Y │ 5 │ O │ O │ O │ O │ O │
   ├───┼───┼───┼───┼───┼───┤
-  │ 4 │ o │ o │ o │ o │ o │
+  │ 4 │ O │ O │ O │ O │ O │
   ├───┼───┼───┼───┼───┼───┤
-A │ 3 │ o │ o │ o │ o │ o │
+A │ 3 │ O │ O │ O │ O │ O │
   ├───┼───┼───┼───┼───┼───┤
-X │ 2 │ o │ o │ o │ o │ o │
+X │ 2 │ O │ O │ O │ O │ O │
   ├───┼───┼───┼───┼───┼───┤
-I │ 1 │ o │ o │ o │ o │ o │
+I │ 1 │ O │ O │ O │ O │ O │
   ├───┼───┼───┼───┼───┼───┤
 s │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │
   └───┴───┴───┴───┴───┴───┘
