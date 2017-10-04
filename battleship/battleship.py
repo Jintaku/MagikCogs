@@ -25,7 +25,7 @@ class Battleship:
 
         embed=discord.Embed(
             title="About Battleship", 
-            description="~ A simple game of Battle Ships built into Magik Bot.\nO - Open Target\nX - Missed Target\nS = Target Hit\nM = Location of ships (at the end of the game)", 
+            description="~ A simple game of Battle Ships built into Magik Bot.\n⚫ - Open Target\n❌ - Missed Target\n🔵 = Target Hit\n⚪ = Location of ships (at the end of the game)", 
             color=0x207cee)
         embed.set_author(
             name="Magik bot", url='http://www.magikbot.co.uk', 
@@ -91,7 +91,7 @@ O O O O O 5 I
         """
 
         for x in range(5): #Size of the board
-            board.append(["⬤"] * 5)
+            board.append(["⚫"] * 5)
 
         def print_board(board): #Making the board
             i = "```\n"
@@ -215,7 +215,7 @@ O O O O O 5 I
             
             elif guess_x == ship_x and guess_y == ship_y:
 
-                board[guess_x][guess_y] = "🚢"
+                board[guess_x][guess_y] = "🔵"
                 print("Sunk a ship.")
                 await self.bot.say("You sunk a battleship!")
                 await self.bot.say(print_board(board))
@@ -224,7 +224,7 @@ O O O O O 5 I
             #-------------------------------------------#    
             elif guess_x == ship1a and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🚢"
+                board[guess_x][guess_y] = "🔵"
 
                 if num == 0:
 
@@ -242,7 +242,7 @@ O O O O O 5 I
 
             elif guess_x == ship1d and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🚢"
+                board[guess_x][guess_y] = "🔵"
 
                 if num == 0:
 
@@ -260,7 +260,7 @@ O O O O O 5 I
                 #-----------------------------------------------#
             elif guess_x == ship2a and guess_y == ship2b:
 
-                board[guess_x][guess_y] = "🚢"
+                board[guess_x][guess_y] = "🔵"
 
                 if num2 == 0:
 
@@ -278,7 +278,7 @@ O O O O O 5 I
 
             elif guess_x == ship2a and guess_y == ship2c:
 
-                board[guess_x][guess_y] = "🚢"
+                board[guess_x][guess_y] = "🔵"
 
                 if num2 == 0:
 
@@ -318,11 +318,11 @@ O O O O O 5 I
                     if turn == 9:
                         await self.bot.say("Game over.")
                         print ("Game Over")
-                        board[ship_x][ship_y] = "M"
-                        board[ship1d][ship1b] = "M" 
-                        board[ship1a][ship1b] = "M"
-                        board[ship2a][ship2b] = "M"
-                        board[ship2a][ship2c] = "M"
+                        board[ship_x][ship_y] = "⚪"
+                        board[ship1d][ship1b] = "⚪" 
+                        board[ship1a][ship1b] = "⚪"
+                        board[ship2a][ship2b] = "⚪"
+                        board[ship2a][ship2c] = "⚪"
                         print(" ")
                         print("Here are all the ships, they're labeled M.")
 
