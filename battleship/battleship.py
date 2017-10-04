@@ -70,7 +70,7 @@ class Battleship:
         guide = """Old guide was here"""
 
         for x in range(5): #Size of the board
-            board.append(["O"] * 5)
+            board.append(["●"] * 5)
 
         def print_board(board): #Making the board
             i = "```"
@@ -163,7 +163,7 @@ class Battleship:
             
             elif guess_x == ship_x and guess_y == ship_y:
 
-                board[guess_x][guess_y] = "S"
+                board[guess_x][guess_y] = "🚢"
                 print("Sunk a ship.")
                 await self.bot.say("You sunk a battleship!")
                 await self.bot.say(print_board(board))
@@ -172,7 +172,7 @@ class Battleship:
             #-------------------------------------------#    
             elif guess_x == ship1a and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🔥"
+                board[guess_x][guess_y] = "🚢"
 
                 if num == 0:
 
@@ -190,7 +190,7 @@ class Battleship:
 
             elif guess_x == ship1d and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🔥"
+                board[guess_x][guess_y] = "🚢"
 
                 if num == 0:
 
@@ -208,7 +208,7 @@ class Battleship:
                 #-----------------------------------------------#
             elif guess_x == ship2a and guess_y == ship2b:
 
-                board[guess_x][guess_y] = "🔥"
+                board[guess_x][guess_y] = "🚢"
 
                 if num2 == 0:
 
@@ -226,7 +226,7 @@ class Battleship:
 
             elif guess_x == ship2a and guess_y == ship2c:
 
-                board[guess_x][guess_y] = "🔥"
+                board[guess_x][guess_y] = "🚢"
 
                 if num2 == 0:
 
