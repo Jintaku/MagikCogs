@@ -91,7 +91,7 @@ O O O O O 5 I
         """
 
         for x in range(5): #Size of the board
-            board.append(["⭕"] * 5)
+            board.append(["⬤"] * 5)
 
         def print_board(board): #Making the board
             i = "```\n"
