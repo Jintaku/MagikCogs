@@ -31,20 +31,22 @@ class Battleship:
         embed.add_field(name="How to play", value="Enter your X and Y value as a comment like this `4 2`. No prefix required. Type `cancel` to stop the game.", inline=True)
         embed.add_field(name="How many turns", value="You have 9 attempts to hit my 4 ships", inline=True)
         embed.add_field(name="Auther", value="UnseenMagik & Potato", inline=True)
-        embed.add_field(name="Battleship Board Layout", value=("  ┌───┬───┬───┬───┬───┬───┐\n"
-                                                               "Y │ 5 │ O │ O │ O │ O │ O │\n"
-                                                               "  ├───┼───┼───┼───┼───┼───┤\n"
-                                                               "  │ 4 │ O │ O │ O │ O │ O │\n"
-                                                               "  ├───┼───┼───┼───┼───┼───┤\n"
-                                                               "A │ 3 │ O │ O │ O │ O │ O │\n"
-                                                               "  ├───┼───┼───┼───┼───┼───┤\n"
-                                                               "X │ 2 │ O │ O │ O │ O │ O │\n"
-                                                               "  ├───┼───┼───┼───┼───┼───┤\n"
-                                                               "I │ 1 │ O │ O │ O │ O │ O │\n"
-                                                               "  ├───┼───┼───┼───┼───┼───┤\n"
-                                                               "s │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │\n"
-                                                               "  └───┴───┴───┴───┴───┴───┘\n"
-                                                               "    X       A   X   I   S")), inline=True)
+        embed.add_field(
+            name="Battleship Board Layout",
+            value=("   ┌───┬───┬───┬───┬───┬───┐\n"
+                    "Y │ 5 │ O │ O │ O │ O │ O │\n"
+                    "  ├───┼───┼───┼───┼───┼───┤\n"
+                    "  │ 4 │ O │ O │ O │ O │ O │\n"
+                    "  ├───┼───┼───┼───┼───┼───┤\n"
+                    "A │ 3 │ O │ O │ O │ O │ O │\n"
+                    "  ├───┼───┼───┼───┼───┼───┤\n"
+                    "X │ 2 │ O │ O │ O │ O │ O │\n"
+                    "  ├───┼───┼───┼───┼───┼───┤\n"
+                    "I │ 1 │ O │ O │ O │ O │ O │\n"
+                    "  ├───┼───┼───┼───┼───┼───┤\n"
+                    "s │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │\n"
+                    "  └───┴───┴───┴───┴───┴───┘\n"
+                    "    X       A   X   I   S")), inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
         await self.bot.say(embed=embed)
