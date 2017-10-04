@@ -257,7 +257,7 @@ class Battleship:
                 else:
 
                     print ("You missed my battleship!")
-                    board[guess_x][guess_y] = "X"
+                    board[guess_x][guess_y] = "❌"
                     await self.bot.say("You missed my battleship! ")
 
                     if turn == 9:
