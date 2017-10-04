@@ -31,7 +31,7 @@ class Battleship:
         embed.add_field(name="How to play", value="Enter your X and Y value as a comment like this `4 2`", inline=True)
         embed.add_field(name="How many turns", value="You have 9 attempts to hit my 4 ships", inline=True)
         embed.add_field(name="Auther", value="UnseenMagik & Potato", inline=True)
-        embed.add_field(name="Battleship Board Layout", value=" Please see grib below", inline=True)
+        embed.add_field(name="Battleship Board Layout", value=" Please see grid below", inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
         await self.bot.say(embed=embed)
@@ -69,7 +69,7 @@ s │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │
         """
 
         for x in range(5): #Size of the board
-            board.append(["O"] * 10)
+            board.append(["O"] * 5)
 
         def print_board(board): #Making the board
             i = "```"
