@@ -46,7 +46,7 @@ class Battleship:
                     "  ├───┼───┼───┼───┼───┼───┤\n"
                     "s │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │\n"
                     "  └───┴───┴───┴───┴───┴───┘\n"
-                    "    X       A   X   I   S")), inline=True)
+                    "    X       A   X   I   S")) inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
         await self.bot.say(embed=embed)
