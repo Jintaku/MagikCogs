@@ -172,7 +172,7 @@ class Battleship:
             #-------------------------------------------#    
             elif guess_x == ship1a and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "S"
+                board[guess_x][guess_y] = "🔥"
 
                 if num == 0:
 
@@ -190,7 +190,7 @@ class Battleship:
 
             elif guess_x == ship1d and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "S"
+                board[guess_x][guess_y] = "🔥"
 
                 if num == 0:
 
@@ -208,7 +208,7 @@ class Battleship:
                 #-----------------------------------------------#
             elif guess_x == ship2a and guess_y == ship2b:
 
-                board[guess_x][guess_y] = "S"
+                board[guess_x][guess_y] = "🔥"
 
                 if num2 == 0:
 
@@ -226,7 +226,7 @@ class Battleship:
 
             elif guess_x == ship2a and guess_y == ship2c:
 
-                board[guess_x][guess_y] = "S"
+                board[guess_x][guess_y] = "🔥"
 
                 if num2 == 0:
 
