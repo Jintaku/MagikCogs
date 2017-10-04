@@ -35,6 +35,8 @@ class Battleship:
         embed.add_field(name="Auther", value="UnseenMagik", inline=False)
         embed.add_field(name="Version", value="API version 0.16.11", inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
+        
+        await self.bot.say(embed=embed)
 
 """
         ```To play Battleship, you must guess the location of my ships. To make your guess, enter your X & Y position in one command sepperated by a space. An example would be 3 2
