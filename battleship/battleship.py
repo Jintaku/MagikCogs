@@ -26,7 +26,8 @@ class Battleship:
         channel = ctx.message.channel
 
 
-        guide = 
+        guide = """
+        
         embed=discord.Embed(title="About Magik Bot", url='http://www.magikbot.co.uk', description="A discord bot made with love. Created for Discord Administration support. With hundreds of commands, admin, mod, support, games, fun and more. For more information see below:", color=0x207cee)
         embed.set_author(name="Magik bot", url='http://www.magikbot.co.uk', icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
@@ -37,8 +38,6 @@ class Battleship:
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
         await self.bot.say(embed=embed)
-
-"""
         ```To play Battleship, you must guess the location of my ships. To make your guess, enter your X & Y position in one command sepperated by a space. An example would be 3 2
 
 O = Open Target
