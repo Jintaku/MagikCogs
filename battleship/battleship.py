@@ -318,11 +318,11 @@ O O O O O 5 I
                     if turn == 9:
                         await self.bot.say("Game over.")
                         print ("Game Over")
-                        board[ship_x][ship_y] = "⚪"
-                        board[ship1d][ship1b] = "⚪" 
-                        board[ship1a][ship1b] = "⚪"
-                        board[ship2a][ship2b] = "⚪"
-                        board[ship2a][ship2c] = "⚪"
+                        board[ship_x][ship_y] = ":white_circle:"
+                        board[ship1d][ship1b] = ":white_circle:" 
+                        board[ship1a][ship1b] = ":white_circle:"
+                        board[ship2a][ship2b] = ":white_circle:"
+                        board[ship2a][ship2c] = ":white_circle:"
                         print(" ")
                         print("Here are all the ships, they're labeled M.")
 
