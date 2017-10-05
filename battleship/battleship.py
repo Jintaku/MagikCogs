@@ -25,7 +25,7 @@ class Battleship:
 
         embed=discord.Embed(
             title="About Battleship", 
-            description="~ A simple game of Battle Ships built into Magik Bot.\n```⚫ - Open Target\n❌ - Missed Target\n🔵 = Target Hit\n⚪ = Location of ships (at the end of the game)```", 
+            description="~ A simple game of Battle Ships built into Magik Bot.\n:blac_circle: - Open Target\n:red_circle: - Missed Target\n:large_blue_circle: = Target Hit\n⚪ = Location of ships (at the end of the game)```", 
             color=0x207cee)
         embed.set_author(
             name="Magik bot", url='http://www.magikbot.co.uk', 
@@ -215,7 +215,7 @@ O O O O O 5 I
             
             elif guess_x == ship_x and guess_y == ship_y:
 
-                board[guess_x][guess_y] = "🔵"
+                board[guess_x][guess_y] = ":large_blue_circle:"
                 print("Sunk a ship.")
                 await self.bot.say("You sunk a battleship!")
                 await self.bot.say(print_board(board))
@@ -224,7 +224,7 @@ O O O O O 5 I
             #-------------------------------------------#    
             elif guess_x == ship1a and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🔵"
+                board[guess_x][guess_y] = ":large_blue_circle:"
 
                 if num == 0:
 
@@ -242,7 +242,7 @@ O O O O O 5 I
 
             elif guess_x == ship1d and guess_y == ship1b:
 
-                board[guess_x][guess_y] = "🔵"
+                board[guess_x][guess_y] = ":large_blue_circle:"
 
                 if num == 0:
 
@@ -260,7 +260,7 @@ O O O O O 5 I
                 #-----------------------------------------------#
             elif guess_x == ship2a and guess_y == ship2b:
 
-                board[guess_x][guess_y] = "🔵"
+                board[guess_x][guess_y] = ":large_blue_circle:"
 
                 if num2 == 0:
 
@@ -278,7 +278,7 @@ O O O O O 5 I
 
             elif guess_x == ship2a and guess_y == ship2c:
 
-                board[guess_x][guess_y] = "🔵"
+                board[guess_x][guess_y] = ":large_blue_circle:"
 
                 if num2 == 0:
 
@@ -305,14 +305,14 @@ O O O O O 5 I
                     await self.bot.say("Oops, that's not even in the ocean.")
                     print ("Oops, that's not even in the ocean.")
                     
-                elif(board[guess_x][guess_y] == "❌"):
+                elif(board[guess_x][guess_y] == ":red_circle:"):
 
                     await self.bot.say("You guessed that one already.")
                     print ("You guessed that one already.")
                 else:
 
                     print ("You missed my battleship!")
-                    board[guess_x][guess_y] = "❌"
+                    board[guess_x][guess_y] = ":red_circle:"
                     await self.bot.say("You missed my battleship! ")
 
                     if turn == 9:
