@@ -323,7 +323,7 @@ O O O O O 5 I
                 await self.bot.say(print_board(board))
                 print("Turn after: ",str(turn))
 
-                await repl.interactive_results(list_of_embeds)
+                # (this can be used to return all messaged in embed and delete old) await repl.interactive_results(list_of_embeds)
 
         #----------------------------------------------------------------#
 
