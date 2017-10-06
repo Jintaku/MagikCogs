@@ -47,12 +47,12 @@ class Battleship:
         embed.add_field(
             name="Battleship Board Layout",
             value=("```Y   1 O O O O O\n"
-                   "       2 O O O O O\n"
-                   "   A   3 O O O O O\n"
-                   "   X   4 O O O O O\n"
-                   "   I   5 O O O O O\n"
-                   "   S   0 1 2 3 4 5\n"
-                   "       X  A X I S```"), inline=True)
+                   "    2 O O O O O\n"
+                   "A   3 O O O O O\n"
+                   "X   4 O O O O O\n"
+                   "I   5 O O O O O\n"
+                   "S   0 1 2 3 4 5\n"
+                   "    X   A X I S```"), inline=True)
         embed.set_footer(
             text="Magik Bot - Providing Discord support since September 2017")
         
