@@ -98,7 +98,6 @@ O O O O O 5 I
         #await self.bot.say(guide)
         print ("Let's play Battleship!")
         print (" ")
-        await repl.interactive_results(list_of_embeds)
         await self.bot.say("Let's play Battleship!"+ "\n")
         await self.bot.say(print_board(board))
 
@@ -324,6 +323,7 @@ O O O O O 5 I
                 await self.bot.say(print_board(board))
                 print("Turn after: ",str(turn))
 
+                await repl.interactive_results(list_of_embeds)
 
         #----------------------------------------------------------------#
 
