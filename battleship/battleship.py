@@ -1,5 +1,5 @@
 import discord
-import repl
+#import repl
 from discord.ext import commands
 from random import randint
 
@@ -57,7 +57,7 @@ class Battleship:
         embed.set_footer(
             text="Magik Bot - Providing Discord support since September 2017")
         
-        await self.bot.say(embed=embed)
+        await self.bot.say(embed=embed) 
 
 
         guide = """
