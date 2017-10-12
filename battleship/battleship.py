@@ -190,7 +190,7 @@ class Battleship:
                 value=print_board(board),
                 inline=True)"""
             #reply = embed
-            reply = embed_board(turn2)
+            reply = embed_board(turn)
             check += 1
             print("Turns:"+str(turn))
 
