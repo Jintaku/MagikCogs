@@ -157,7 +157,8 @@ class Tweets():
             await self.bot.say(message)
 
     @_tweets.command(pass_context=True, name="add")
-    @checks.is_owner()
+    #@checks.is_owner()
+    @checks.admin_or_permissions(manage_server=True)
     async def _add(self, ctx, user_or_list_to_track: str):
         """Adds the twitter user to the list of followed twitter users.
         Provide a Twitter list (e.g. http://twitter.com/rokxx/lists/dota-2/members) to track multiple twitter users at once. Changes apply once the stream is restarted."""
@@ -209,7 +210,8 @@ class Tweets():
                 await self.bot.say("Finished adding twitter users to list. Count: %s" %len(twitter_accounts))
 
     @_tweets.command(pass_context=True, name="remove")
-    @checks.is_owner()
+    #@checks.is_owner()
+    @checks.admin_or_permissions(manage_server=True)
     async def _remove(self, ctx, user_to_remove: str):
         """Removes the twitter user from the list of followed twitter users.
         Write all after to remove the entire list."""
@@ -244,7 +246,8 @@ class Tweets():
                 await self.bot.say("Removed %s from list" % removed['user_name'])
 
     @_tweets.command(pass_context=True, no_pm=True, name='start')
-    @checks.is_owner()
+    #@checks.is_owner()
+    @checks.admin_or_permissions(manage_server=True)
     async def start(self):
         """Owner only: Starts the twitter stream"""
         if self.twitterStreamActive:
@@ -255,7 +258,8 @@ class Tweets():
             self.twitterStreamActive = True
 
     @_tweets.command(pass_context=True, no_pm=True, name='stop')
-    @checks.is_owner()
+    #@checks.is_owner()
+    @checks.admin_or_permissions(manage_server=True)
     async def stop(self):
         """Owner only: Stops the twitter stream"""
         if self.twitterStreamActive:
