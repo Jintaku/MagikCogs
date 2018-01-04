@@ -15,7 +15,7 @@ class Battleship:
             color=0x207cee)
         embed.set_author(
             name="Magik Bot",
-            url = 'http://www.magikbot.co.uk'
+            url = 'http://www.magikbot.co.uk',
             icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.set_thumbnail(
             url='https://cdn.discordapp.com/attachments/355249562719617024/365100412874784768/Battleship-ubicom-VIDEO-launch_trailer_2016_08_02-712x712_Desktop_261122.png')
