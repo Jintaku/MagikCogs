@@ -14,7 +14,7 @@ class Battleship:
             description="~ A simple game of Battle Ships.\n:black_circle: = Open Target\n:red_circle: = Missed Target\n:large_blue_circle: = Target Hit\n⚪ = Location of ships (at the end of the game)", 
             color=0x207cee)
         embed.set_author(
-            name=Magik Bot",
+            name="Magik Bot",
             url = 'http://www.magikbot.co.uk'
             icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
         embed.set_thumbnail(
