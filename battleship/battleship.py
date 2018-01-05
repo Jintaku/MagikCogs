@@ -40,7 +40,7 @@ class Battleship:
             text="Possible by - xDp64x and UnseenMagik")
         
         instructions = await self.bot.say(embed=embed)""" 
-
+    @commands.command()
     async def battleship(self, ctx):
         
         embed=discord.Embed(
