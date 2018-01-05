@@ -407,6 +407,7 @@ class Battleship:
                 reply2 = "I got no response from you :cry: . Stopping game. "
             elif stop == 1:
                 #await self.bot.delete_message(play)
+                await self.bot.delete_message(instructions)
                 await self.bot.delete_message(message_Embed)
                 await self.bot.delete_message(msg)
                 
