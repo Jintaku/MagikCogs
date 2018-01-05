@@ -43,7 +43,9 @@ class Battleship:
     @commands.command(pass_context=True)
     async def battleship(self, ctx):
 
-        #----------------------------------------------------------------# 
+        #----------------------------------------------------------------#
+        instructions = battlehelp()
+        await self.bot.say(instructions)
         num = 0
         num2 = 0
         msg = ""
