@@ -153,7 +153,7 @@ class Distance:
             calc = calculate(long1, lat1, long2, lat2)
             cooldown = cooldown(calc)
             msg = calc_embed(calc, cooldown)
-        await self.bot.say(embed=embed)
+        await self.bot.say(embed=msg)
 
 def setup(bot):
     bot.add_cog(Distance(bot))
