@@ -15,13 +15,13 @@ class Distance:
         """Calculate the distance between two coordinates and also provide you with a cooldown time."""
         # Your code will go here
 
-        """def error_embed_1(self):
+        def error_embed_1(self):
             embed=discord.Embed(
                 title="Error:",
                 description="Not enough data given. Did you give 4 different coordinates, seperated by spaces?",
                 color=0x207cee)
 
-            return embed"""
+            return embed
 
         def calc_embed(msg, msg2):
             embed=discord.Embed(
