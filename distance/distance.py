@@ -6,6 +6,9 @@ import math
 
 class Distance:
     """Calculate the distance between two coordinates."""
+    
+        def __init__(self, bot):
+        self.bot = bot
 
     @commands.command(pass_context=True)
     async def distance(self, ctx, *, message):
