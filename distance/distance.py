@@ -7,7 +7,7 @@ import math
 class Distance:
     """Calculate the distance between two coordinates."""
 
-    @commands.command(pass_context = True)
+    @commands.command(pass_context=True)
     async def distance(self, ctx, *, message):
         """Calculate the distance between two coordinates."""
         # Your code will go here
