@@ -17,8 +17,7 @@ class Distance:
                 title="Error:",
                 description="Not enough data given. Did you give 4 different coordinates, seperated by spaces?",
                 color=0x207cee)
-                embed.set_footer(
-                text="Possible by - xDp64x#9133 and Magik#0203")
+
             return embed
 
         def calc_embed(msg, msg2):
