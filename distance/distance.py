@@ -22,6 +22,12 @@ class Distance:
                 color=0x207cee)
 
             return embed
+        def error_embed_2(self):
+            embed=discord.Embed(
+                title="Error:",
+                description="Your message is invalid. Please use this format\n``!distance <num1> <num2> <num3> <num4>\nWhich would look like this: ``!distance 51.301597 -0.598019 51.270664 -0.594132``",
+                color=0x207cee)
+            return embed
 
         def calc_embed(msg, msg2):
             embed=discord.Embed(
@@ -147,6 +153,9 @@ class Distance:
 
         except IndexError:
             msg = error_embed_1(self)
+            bool = False
+        except ValueError:
+            msg = error_embed_2(self)
             bool = False
 
         if bool == True:
