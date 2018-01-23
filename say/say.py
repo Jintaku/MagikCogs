@@ -3,7 +3,7 @@ from discord.ext import commands
 from .utils import checks
 
 class Say:
-    def __init__(self):
+    def __init__(self, bot):
         self.bot = bot
 
     
@@ -45,4 +45,4 @@ class Say:
             await self.bot.whisper(author, embed=Msg2)
             
 def setup(bot):
-    bot.add_cog(Say())
+    bot.add_cog(Say(bot))
