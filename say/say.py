@@ -3,6 +3,8 @@ from discord.ext import commands
 from redbot.core import checks
 
 class Say:
+        def __init__(self, bot):
+            self.bot = bot
 
     
     @commands.command(pass_context=True)
