@@ -19,7 +19,7 @@ class Say:
         #5: for just [p]say
         #8: for [p]betasay
         try:
-            await message.delete()
+            await self.bot.delete_message(message)
             
         except discord.Forbidden:
             print("No permissions.")
@@ -32,9 +32,9 @@ class Say:
                 return embed           
 
             Msg = error(self, ctx)
-            await author.send(embed=Msg)
+            await self.bot.whisper(author, embed=Msg)
         try:
-            await ctx.send(msg)
+            await self.bot.say(msg)
         except discord.errors.HTTPException:
             def error2(self, ctx):
                 embed=discord.Embed(
@@ -43,6 +43,7 @@ class Say:
                     color=0x207cee)
                 return embed
             Msg2 = error2(self, ctx)
-            await author.send(embed=Msg2)
+            await self.bot.whisper(author, embed=Msg2)
+            
 def setup(bot):
     bot.add_cog(Say())
