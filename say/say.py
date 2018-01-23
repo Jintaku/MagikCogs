@@ -16,10 +16,7 @@ class Say:
         message = ctx.message
         author = ctx.message.author
         
-        #This gets rid of the command "[p]say" or "[p]betasay" depending on the number...
         msg = msg[5:]
-        #5: for just [p]say
-        #8: for [p]betasay
         try:
             await self.bot.delete_message(message)
             
