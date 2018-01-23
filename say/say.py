@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from redbot.core import checks
+from .utils import checks
 
 class Say:
     def __init__(self, bot):
