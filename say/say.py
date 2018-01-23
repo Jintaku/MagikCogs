@@ -3,7 +3,7 @@ from discord.ext import commands
 from .utils import checks
 
 class Say:
-    def __init__(self, bot):
+    def __init__(self):
         self.bot = bot
 
     
