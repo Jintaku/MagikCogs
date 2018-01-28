@@ -64,12 +64,12 @@ class Battleship:
         embed.add_field(
             name="Battleship Board Layout",
             value=(""":regional_indicator_y: :one: :zero: :zero: :zero: :zero: :zero:
-<:gap:367578219316248577> :two: :zero: :zero: :zero: :zero: :zero:
+<:gap:407297225656631296> :two: :zero: :zero: :zero: :zero: :zero:
 :regional_indicator_a: :three: :zero: :zero: :zero: :zero: :zero:
 :regional_indicator_x: :four: :zero: :zero: :zero: :zero: :zero:
 :regional_indicator_i: :five: :zero: :zero: :zero: :zero: :zero:
 :regional_indicator_s: :zero: :one: :two: :three: :four: :five:
-<:gap:367578219316248577> :regional_indicator_x: <:gap:367578219316248577> :regional_indicator_a: :regional_indicator_x: :regional_indicator_i: :regional_indicator_s:"""), inline=True)
+<:gap:407297225656631296> :regional_indicator_x: <:gap:407297225656631296> :regional_indicator_a: :regional_indicator_x: :regional_indicator_i: :regional_indicator_s:"""), inline=True)
         embed.set_footer(
             text="Possible by - xDp64x and UnseenMagik")
         
