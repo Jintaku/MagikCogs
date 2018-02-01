@@ -3,5 +3,5 @@
 "DESCRIPTION" : "This will calculate the distance between two coordinates and provide a cooldown time",    
 "DISABLED" : false,    
 "INSTALL_MSG" : "Thanks for adding my repo! hope you find any of my cogs useful",    
-"NAME" : "MagikCogs",    "SHORT" : "Pokemon Go distance calculater."    
+"NAME" : "MagikCogs",    "SHORT" : "Pokemon Go distance calculater and cooldown timer."    
 }
