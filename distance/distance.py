@@ -1,6 +1,6 @@
 from discord.ext import commands
 import discord
-import gpxpy.geo
+from gpxpy import geo
 import math
 #from math import sin, cos, sqrt, atan2, radians
 
