@@ -11,7 +11,7 @@ class Support:
 
     __original author__ = "mikeshardmind"
     __modified by__ = "Magik#0203 & xDp6xx"
-    __version__ = "1.0.1"
+    __version__ = "1.0.2"
 
     def __init__(self, bot):
         self.bot = bot
@@ -22,7 +22,7 @@ class Support:
     def save_json(self):
         dataIO.save_json("data/support/settings.json", self.settings)
 
-    @commands.group(name="support", pass_context=True, no_pm=True)
+    @commands.group(name="suggestionbox", pass_context=True, no_pm=True)
     async def support(self, ctx):
         """configuration settings"""
         if ctx.invoked_subcommand is None:
