@@ -127,8 +127,8 @@ class SuggestionBox:
             else author.default_avatar_url
 
         em = discord.Embed(description=suggestion,
-                           color=discord.Color.purple())
-        em.set_author(name='Suggestion from {0.display_name}'.format(author),
+                           color=discord.Color.blue())
+        em.set_author(name='Support Request from {0.display_name}'.format(author),
                       icon_url=avatar)
         em.set_footer(text='{0.id}'.format(author))
 
