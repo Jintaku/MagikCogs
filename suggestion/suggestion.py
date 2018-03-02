@@ -41,7 +41,7 @@ class SuggestionBox:
             self.save_json()
 
     @checks.admin_or_permissions(Manage_server=True)
-    @setsuggest.command(name="sugfestoutput", pass_context=True, no_pm=True)
+    @setsuggest.command(name="suggestoutput", pass_context=True, no_pm=True)
     async def setoutput(self, ctx, chan: discord.Channel):
         """sets the output channel(s)"""
         server = ctx.message.server
