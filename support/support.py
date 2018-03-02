@@ -1,6 +1,6 @@
 import os
 import asyncio  # noqa: F401
-import discord
+import randint
 from discord.ext import commands
 from cogs.utils.dataIO import dataIO
 from cogs.utils import checks
@@ -126,7 +126,8 @@ class SuggestionBox:
             else author.default_avatar_url
 
         em = discord.Embed(description=suggestion,
-                           color=discord.Color.purple())
+                           colour=randint(0, 0xFFFFFF))
+       
         em.set_author(name='Support Request from {0.display_name}'.format(author),
                       icon_url=avatar)
         em.set_footer(text='{0.id}'.format(author))
