@@ -1,7 +1,7 @@
 import os
 import asyncio  # noqa: F401
-import random import randint
 import discord
+from random import randint
 from discord.ext import commands
 from cogs.utils.dataIO import dataIO
 from cogs.utils import checks
