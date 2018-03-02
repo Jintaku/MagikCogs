@@ -7,10 +7,11 @@ from cogs.utils import checks
 
 
 class Support:
-    """custom cog for a configureable suggestion box"""
+    """custom cog for a configureable support reports"""
 
-    __author__ = "mikeshardmind"
-    __version__ = "1.4.2"
+    __original author__ = "mikeshardmind"
+    __modified by__ = "Magik#0203 & xDp6xx"
+    __version__ = "1.0.1"
 
     def __init__(self, bot):
         self.bot = bot
@@ -19,10 +20,10 @@ class Support:
             self.settings[s]['usercache'] = []
 
     def save_json(self):
-        dataIO.save_json("data/suggestionbox/settings.json", self.settings)
+        dataIO.save_json("data/support/settings.json", self.settings)
 
-    @commands.group(name="setsuggest", pass_context=True, no_pm=True)
-    async def setsuggest(self, ctx):
+    @commands.group(name="support", pass_context=True, no_pm=True)
+    async def support(self, ctx):
         """configuration settings"""
         if ctx.invoked_subcommand is None:
             await self.bot.send_cmd_help(ctx)
@@ -65,7 +66,7 @@ class Support:
     @checks.admin_or_permissions(Manage_server=True)
     @setsuggest.command(name="toggleactive", pass_context=True, no_pm=True)
     async def suggest_toggle(self, ctx):
-        """Toggles whether the suggestion box is enabled or not"""
+        """Toggles whether the support report box is enabled or not"""
         server = ctx.message.server
         if server.id not in self.settings:
             self.initial_config(server.id)
@@ -73,49 +74,45 @@ class Support:
             not self.settings[server.id]['inactive']
         self.save_json()
         if self.settings[server.id]['inactive']:
-            await self.bot.say("Suggestions disabled.")
+            await self.bot.say("Support report disabled.")
         else:
-            await self.bot.say("Suggestions enabled.")
+            await self.bot.say("Support rerport enabled.")
 
     @commands.cooldown(1, 300, commands.BucketType.user)
     @commands.command(name="suggest", pass_context=True)
-    async def makesuggestion(self, ctx):
-        "make a suggestion by following the prompts"
+    async def makesupport(self, ctx):
+        "make a support report by following the prompts"
         author = ctx.message.author
         server = ctx.message.server
 
         if server.id not in self.settings:
-            return await self.bot.say("Suggestion submissions have not been "
+            return await self.bot.say("Support report submissions have not been "
                                       "configured for this server.")
         if self.settings[server.id]['inactive']:
-            return await self.bot.say("Suggestion submission is not currently "
+            return await self.bot.say("Support report submission is not currently "
                                       "enabled on this server.")
 
         if author.id in self.settings[server.id]['usercache']:
-            return await self.bot.say("Finish making your prior sugggestion "
+            return await self.bot.say("Finish making your prior support report "
                                       "before making an additional one")
 
-        await self.bot.say("I will message you to collect your suggestion.")
+        await self.bot.say("I will message you to collect your support report.")
         self.settings[server.id]['usercache'].append(author.id)
         self.save_json()
         dm = await self.bot.send_message(author,
-                                         "Please respond to this message with your suggestion.\nYour "
-                                         "suggestion should be a single "
-                                         "message")
+                                         "Please respond to this message with your support report.\nYour report should be a single message")
         message = await self.bot.wait_for_message(channel=dm.channel,
                                                   author=author, timeout=120)
 
         if message is None:
             await self.bot.send_message(author,
-                                        "I can't wait forever, "
-                                        "try again when ready")
+                                        "I can't wait forever, try again when ready")
             self.settings[server.id]['usercache'].remove(author.id)
             self.save_json()
         else:
             await self.send_suggest(message, server)
 
-            await self.bot.send_message(author, "Your suggestion was "
-                                        "submitted.")
+            await self.bot.send_message(author, "Your support report was submitted.")
 
     async def send_suggest(self, message, server):
 
@@ -140,13 +137,13 @@ class Support:
 
 
 def check_folder():
-    f = 'data/suggestionbox'
+    f = 'data/support'
     if not os.path.exists(f):
         os.makedirs(f)
 
 
 def check_file():
-    f = 'data/suggestionbox/settings.json'
+    f = 'data/support/settings.json'
     if dataIO.is_valid_json(f) is False:
         dataIO.save_json(f, {})
 
