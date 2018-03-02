@@ -15,7 +15,7 @@ class Support:
 
     def __init__(self, bot):
         self.bot = bot
-        self.settings = dataIO.load_json('data/suggestionbox/settings.json')
+        self.settings = dataIO.load_json('data/support/settings.json')
         for s in self.settings:
             self.settings[s]['usercache'] = []
 
