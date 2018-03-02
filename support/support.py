@@ -96,7 +96,7 @@ class SuggestionBox:
             return await self.bot.say("Finish making your prior report "
                                       "before making an additional one")
 
-        await self.bot.say("I will message you to collect your support question. Please check your DM's.")
+        await self.bot.say("I will message you to collect your support question. Please check your DM.")
         self.settings[server.id]['usercache'].append(author.id)
         self.save_json()
         dm = await self.bot.send_message(author,
