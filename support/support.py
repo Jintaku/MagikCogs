@@ -9,8 +9,7 @@ from cogs.utils import checks
 class SuggestionBox:
     """custom cog for a configureable suggestion box"""
 
-    __original author__ = "mikeshardmind"
-    __modified by__ = "Magik"
+    __author__ = "mikeshardmind"
     __version__ = "1.0.2"
 
     def __init__(self, bot):
