@@ -9,8 +9,9 @@ from cogs.utils import checks
 class SuggestionBox:
     """custom cog for a configureable suggestion box"""
 
-    __author__ = "mikeshardmind"
-    __version__ = "1.4.2"
+    __original author__ = "mikeshardmind"
+    __modified by__ = "Magik"
+    __version__ = "1.0.2"
 
     def __init__(self, bot):
         self.bot = bot
@@ -85,17 +86,17 @@ class SuggestionBox:
         server = ctx.message.server
 
         if server.id not in self.settings:
-            return await self.bot.say("Support report submissions have not been "
+            return await self.bot.say("Support question submissions have not been "
                                       "configured for this server.")
         if self.settings[server.id]['inactive']:
-            return await self.bot.say("Support reports submission is not currently "
+            return await self.bot.say("Support question submission is not currently "
                                       "enabled on this server.")
 
         if author.id in self.settings[server.id]['usercache']:
             return await self.bot.say("Finish making your prior report "
                                       "before making an additional one")
 
-        await self.bot.say("I will message you to collect your support report.")
+        await self.bot.say("I will message you to collect your support question. Please check your DM's.")
         self.settings[server.id]['usercache'].append(author.id)
         self.save_json()
         dm = await self.bot.send_message(author,
@@ -115,7 +116,7 @@ class SuggestionBox:
         else:
             await self.send_suggest(message, server)
 
-            await self.bot.send_message(author, "Your support report was "
+            await self.bot.send_message(author, "Your support question was "
                                         "submitted.")
 
     async def send_suggest(self, message, server):
