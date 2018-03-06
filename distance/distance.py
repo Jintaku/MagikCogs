@@ -41,7 +41,7 @@ class Distance:
                 inline=False)
             embed.add_field(
                 name="**Cooldown Timer:**", 
-                value="time...",
+                value="{} ".format(time),
                 #value="{} ".format(msg2),
                 inline=False)
             return embed
@@ -199,7 +199,7 @@ class Distance:
             elif dist >= 2 and dist <= 3:
                 time = "1 minutes"                
 
-            elif dist and dist <= 1:
+            elif dist >= 0 and dist <= 1:
                 time = "48 seconds"
                       
             return time
