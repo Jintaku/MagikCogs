@@ -214,9 +214,11 @@ class Distance:
 
         except IndexError:
             msg = error_embed_1(self)
+            await self.bot.say(embed=msg)
             bool = False
         except ValueError:
             msg = error_embed_2(self)
+            await self.bot.say(embed=msg)
             bool = False
 
         if bool == True:
@@ -225,8 +227,9 @@ class Distance:
             cooldown = cooldown(calc)
             msg = calc_embed(calc, cooldown)
             await self.bot.say("True")
-        await self.bot.say(calc)
-        await self.bot.say(embed=msg)
+            await self.bot.say(embed=msg)
+        #await self.bot.say(calc)
+        #await self.bot.say(embed=msg)
 
 def setup(bot):
     bot.add_cog(Distance(bot))
