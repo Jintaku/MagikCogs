@@ -2,7 +2,6 @@ from discord.ext import commands
 import discord
 import gpxpy.geo
 import math
-#from math import sin, cos, sqrt, atan2, radians
 
 class Distance:
     """Calculate the distance between two coordinates."""
@@ -37,16 +36,13 @@ class Distance:
             embed.add_field(
                 name="**Calculated Distance:**",
                 value="{} Kilometers".format(dist),
-                #value="{} Kilometers".format(str(msg)),
                 inline=False)
             embed.add_field(
                 name="**Cooldown Timer:**", 
                 value="{} ".format(time),
-                #value="{} ".format(msg2),
                 inline=False)
             return embed
 
-        #def calculate(lon1, lat1, lon2, lat2):
         def calculate(lat1, lon1, lat2, lon2):
             dist = gpxpy.geo.haversine_distance(lat1, lon1, lat2, lon2)
             dist = dist/1000
@@ -57,7 +53,6 @@ class Distance:
         def cooldown(dist):
             time = " "
 
-            
             if dist >= 1500:
                 time = "120 minutes"
 
@@ -218,22 +213,17 @@ class Distance:
 
         except IndexError:
             msg = error_embed_1(self)
-            await self.bot.say(embed=msg)
             bool = False
+            
         except ValueError:
             msg = error_embed_2(self)
-            await self.bot.say(embed=msg)
             bool = False
 
         if bool == True:
-            #calc = calculate(long1, lat1, long2, lat2)
             calc = calculate(lat1, long1, lat2, long2)
             cooldown = cooldown(calc)
             msg = calc_embed(calc, cooldown)
-            await self.bot.say("True")
-            await self.bot.say(embed=msg)
-        #await self.bot.say(calc)
-        #await self.bot.say(embed=msg)
+        await self.bot.say(embed=msg)
 
 def setup(bot):
     bot.add_cog(Distance(bot))
