@@ -36,7 +36,7 @@ class Distance:
                 color=0x207cee)
             embed.add_field(
                 name="**Calculated Distance:**",
-                value="{} Kilometers".format(msg),
+                value="{} Kilometers".format(str(msg)),
                 inline=False)
             embed.add_field(
                 name="**Cooldown Timer:**", 
