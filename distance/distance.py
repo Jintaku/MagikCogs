@@ -199,8 +199,10 @@ class Distance:
             elif dist >= 2 and dist <= 3:
                 time = "1 minutes"                
 
-            elif dist >= 0 and dist <= 1:
+            elif dist >= 1 and dist <= 2:
                 time = "48 seconds"
+            else:
+                time = "No cooldown"
                       
             return time
 
