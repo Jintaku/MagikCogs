@@ -41,7 +41,7 @@ class Distance:
                 inline=False)
             embed.add_field(
                 name="**Cooldown Timer:**", 
-                value="{} ".format(time),
+                value="time...",
                 #value="{} ".format(msg2),
                 inline=False)
             return embed
