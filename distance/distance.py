@@ -29,19 +29,19 @@ class Distance:
                 color=0x207cee)
             return embed
 
-        def calc_embed(msg, msg2):
+        def calc_embed(dist, time):
             embed=discord.Embed(
                 title="Magik Bot",
                 description="Description ",
                 color=0x207cee)
             embed.add_field(
                 name="**Calculated Distance:**",
-                value="distance...",
+                value="{} Kilometers".format(dist),
                 #value="{} Kilometers".format(str(msg)),
                 inline=False)
             embed.add_field(
                 name="**Cooldown Timer:**", 
-                value="timer...",
+                value="{} ".format(time),
                 #value="{} ".format(msg2),
                 inline=False)
             return embed
