@@ -13,7 +13,7 @@ class Distance:
     @commands.command(pass_context=True)
     async def distance(self, ctx, *, message):
         """Calculate the distance between two coordinates and also provide you with a cooldown time."""
-        # Your code will go here
+
 
         def error_embed_1(self):
             embed=discord.Embed(
@@ -44,7 +44,8 @@ class Distance:
                 inline=False)
             return embed
 
-        def calculate(lon1, lat1, lon2, lat2):
+        #def calculate(lon1, lat1, lon2, lat2):
+        def calculate(lat1, lon1, lat2, lon2):
             dist = gpxpy.geo.haversine_distance(lat1, lon1, lat2, lon2)
             dist = dist/1000
             dist = round(dist, 2)
@@ -219,7 +220,8 @@ class Distance:
             bool = False
 
         if bool == True:
-            calc = calculate(long1, lat1, long2, lat2)
+            #calc = calculate(long1, lat1, long2, lat2)
+            calc = calculate(lat1, long1, lat2, long2)
             cooldown = cooldown(calc)
             msg = calc_embed(calc, cooldown)
         await self.bot.say(embed=msg)
