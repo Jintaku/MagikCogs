@@ -32,7 +32,7 @@ class Distance:
         def calc_embed(msg, msg2):
             embed=discord.Embed(
                 title="Magik Bot",
-                description=" ",
+                description="Description ",
                 color=0x207cee)
             embed.add_field(
                 name="**Calculated Distance:**",
