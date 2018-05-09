@@ -1,4 +1,6 @@
 # CSPM
+#  THIS IS A WORK IN PROGRESS - CURRENTLY NOT A WORKING COG
+
 Crowd-Sourced PokeMap for Monocle
 
 1) Install discord.py using: python3 -m pip install -U discord.py
