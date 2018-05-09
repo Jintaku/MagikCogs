@@ -15,14 +15,16 @@ ADDED_BOSS = 3
 FULL_POINT = 1
 PARTIAL_POINT = 0.5
 
-bot = commands.Bot(command_prefix = '!') # Set prefix to !
-
 database = MySQLdb.connect(host,user,password,database)
-
 cursor = database.cursor()
 
-print('CSPM Started at ' + str(time.strftime('%I:%M %p on %m.%d.%y',  time.localtime(calendar.timegm(datetime.datetime.utcnow().timetuple())))) + ' for ' + str(instance_id))
-
+class CSPM:
+    """Crowd-Sourced PokeMap for Pokemon Go"""
+    
+    def __init__(self, bot):
+        self.bot = bot
+       
+@commands.command(pass_context=True)
 async def incubate(ctx, gym_id, remaining_time):
     channel = discord.Object(id=bot_channel)
     current_time = datetime.datetime.utcnow()
@@ -630,4 +632,5 @@ async def helpme(ctx):
         else:
             await bot.say(embed=help_embed2)
 
-bot.run(token)
+def setup(bot):
+    bot.add_cog(CSPM(bot))
