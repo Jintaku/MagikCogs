@@ -2,7 +2,7 @@ import random
 import aiohttp
 import discord
 import asyncio
-from random import randint, choices
+from random import randint, choice
 from discord.ext import commands
 from .utils.chat_formatting import *
 from .utils.dataIO import dataIO
