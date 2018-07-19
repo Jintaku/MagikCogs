@@ -13,8 +13,8 @@ numbs = {
 }
 
 
-class Redportal:
-    """Interact with cogs.red through your bot"""
+class Gym:
+    """Search for Gyms"""
 
     def __init__(self, bot):
         self.bot = bot
@@ -48,21 +48,11 @@ class Redportal:
 
             for cog in data['results']['list']:
                 embed = discord.Embed(title=cog['name'],
-                                      url='https://cogs.red{}'.format(cog['links']['self']),
-                                      description=((cog['description'] and len(cog['description']) > 175 and '{}...'.format(cog['description'][:175])) or cog['description']) or cog['short'],
-                                      color=0xfd0000)
-                embed.add_field(name='Type', value=cog['repo']['type'], inline=True)
-                embed.add_field(name='Author', value=cog['author']['name'], inline=True)
-                embed.add_field(name='Repo', value=cog['repo']['name'], inline=True)
+                embed.add_field(name='Author', value='author', inline=True)
+                embed.add_field(name='Repo', value='repo', inline=True)
+                embed.add_field(name='cog', value='cog install', inline=False)
                 embed.add_field(name='Command to add repo',
-                                value='{}cog repo add {} {}'.format(ctx.prefix, cog['repo']['name'], cog['links']['github']['repo']),
-                                inline=False)
-                embed.add_field(name='Command to add cog',
-                                value='{}cog install {} {}'.format(ctx.prefix, cog['repo']['name'], cog['name']),
-                                inline=False)
-                embed.set_footer(text='{}{}'.format('{} ⭐ - '.format(cog['votes']),
-                                                    (len(cog['tags'] or []) > 0 and '🔖 {}'.format(', '.join(cog['tags']))) or 'No tags set 😢'
-                                                    ))
+                embed.set_footer(text='footer'),
                 embeds.append(embed)
 
             return embeds, data
