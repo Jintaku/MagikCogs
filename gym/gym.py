@@ -25,7 +25,7 @@ class Gym:
 
     @commands.group(pass_context=True, aliases=['gy'])
     async def gym(self, ctx):
-        """Interact with cogs.red through your bot"""
+        """Search for Gyms"""
 
         if ctx.invoked_subcommand is None:
             await self.bot.send_cmd_help(ctx)
@@ -34,35 +34,18 @@ class Gym:
         # future response dict
         data = None
 
-        try:
-            async with self.session.get(url, headers={"User-Agent": "Sono-Bot"}) as response:
-                data = await response.json()
-
-        except:
-            return None
-
-        if data is not None and not data['error'] and len(data['results']['list']) > 0:
 
             # a list of embeds
             embeds = []
 
             for cog in data['results']['list']:
                 embed = discord.Embed(title=cog['name'],
-                                      url='https://cogs.red{}'.format(cog['links']['self']),
-                                      description=((cog['description'] and len(cog['description']) > 175 and '{}...'.format(cog['description'][:175])) or cog['description']) or cog['short'],
-                                      color=0xfd0000)
-                embed.add_field(name='Type', value=cog['repo']['type'], inline=True)
-                embed.add_field(name='Author', value=cog['author']['name'], inline=True)
-                embed.add_field(name='Repo', value=cog['repo']['name'], inline=True)
-                embed.add_field(name='Command to add repo',
-                                value='{}cog repo add {} {}'.format(ctx.prefix, cog['repo']['name'], cog['links']['github']['repo']),
-                                inline=False)
-                embed.add_field(name='Command to add cog',
-                                value='{}cog install {} {}'.format(ctx.prefix, cog['repo']['name'], cog['name']),
-                                inline=False)
-                embed.set_footer(text='{}{}'.format('{} ⭐ - '.format(cog['votes']),
-                                                    (len(cog['tags'] or []) > 0 and '🔖 {}'.format(', '.join(cog['tags']))) or 'No tags set 😢'
-                                                    ))
+                embed.add_field(name='Type', value='type', inline=True)
+                embed.add_field(name='Author', value='author', inline=True)
+                embed.add_field(name='Repo', value='repo', inline=True)
+                embed.add_field(name='cog', value='cog install', inline=False)
+                embed.set_footer(text='footer')
+
                 embeds.append(embed)
 
             return embeds, data
@@ -70,26 +53,7 @@ class Gym:
         else:
             return None
 
-    @redportal.command(pass_context=True)
-    async def search(self, ctx, *, term: str):
-        """Searches for a cog"""
 
-        try:
-            # base url for the cogs.red search API
-            base_url = 'https://cogs.red/api/v1/search/cogs'
-
-             # final request url
-            url = '{}/{}'.format(base_url, quote(term))
-
-            embeds, data = await self._search_redportal(ctx, url)
-
-            if embeds is not None:
-                await self.cogs_menu(ctx, embeds, message=None, page=0, timeout=30, edata=data)
-            else:
-                await self.bot.say('No cogs were found or there was an error in the process')
-
-        except TypeError:
-            await self.bot.say('No cogs were found or there was an error in the process')
 
     async def cogs_menu(self, ctx, cog_list: list,
                         message: discord.Message=None,
