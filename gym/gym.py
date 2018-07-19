@@ -51,10 +51,11 @@ class Gym:
                 embed.add_field(name='Author', value='author', inline=True)
                 embed.add_field(name='Repo', value='repo', inline=True)
                 embed.add_field(name='cog', value='cog install', inline=False)
-                embed.add_field(name='Command to add repo',
-                embed.set_footer(text='footer'),
+                embed.add_field(name='Command to add repo')
+                embed.set_footer(text='footer')
+                                      
                 embeds.append(embed)
-
+                                    
             return embeds, data
 
         else:
