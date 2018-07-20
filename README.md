@@ -7,28 +7,6 @@ Sadly, making and maintaining these cogs costs time, but no money. They're all m
 
 The MagikCogs Repo is public and anyone is welcome to use these cogs with their own version of Red-DiscordBot v, however, keep in mind, they were designed or modified for use with Magik Bot.
 
-# Installation:
-To install the cogs, Follow the given steps:
-
-**Step 1** - Adding the repo.
-> To add the repo, type this into the chat:
-> 
-> ``[p]cog repo add magikcogs https://github.com/unseenmagik/MagikCogs``
-> 
-> Then type,"I agree".
-
-**Step 2** - Adding the cog.
-> To add the cog, type this into the chat:
-> 
-> ``[p]cog install magikcogs [cog_name]``
-> 
-> If it has any library dependencies, type ``pip3 install [library_name]`` in git.
-> 
-> Once the module has loaded up, type yes.
-
-<h2>Currently working v2 Cogs:</h2>
-
-Where <b>[p]</b> is the prefix for your bot.
 
 # About:
 Use the ``[p]about`` to display information about Magik Bot. 
@@ -46,18 +24,7 @@ Use the ``[p]distance <coords>`` command and the bot will calculate the distance
 Example: ``[p]distance 51.301597 -0.598019 51.270664 -0.594132``
 This cog can be used for calculating distances for Pokemon Go ++ users.
 
-# Star Board:
-Use the ``[p]!addstarboard [channel] [emoji=⭐]`` in the channel of your choice for where you would like stared messages to be saved. When a user adds a reaction to a post using the assigned emoji, these messages will be sent to the channel you selected.
- 
-  
-# Tic Tac Toe:
-Use the ``[p]tictactoe`` to start a game of Tic-Tac-Toe  AKA naughts and crosses. Play against the bot and see who wins.
-This cog can be used to see the bots response rate.
 
-# Tweets:
->NOTE: You will need **tweepy** as a Depencency. ``tweepy``.
-Tweets is a cog that will allow you bot to post linked twitter accounts tweets to your discord server channels.
-Use the ``[p]tweets`` to list all extended commands.
 
 Many   thanks to <b>xDp64x#9133</b> for his support on these cogs. 
   
