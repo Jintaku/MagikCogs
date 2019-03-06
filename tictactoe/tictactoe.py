@@ -91,7 +91,7 @@ class Tictactoe(BaseCog):
                         cell = move
                         break
             else:
-                msg = await ctx.bot.wait_for("message", check=MessagePredicate.same_context(ctx))
+                msg = await ctx.bot.wait_for("message", check=MessagePredicate.same_context(ctx, user=players[turn]))
  
                 if msg.content.lower() in ["quit", "abort", "stop", "exit"]:
                     # because why not
